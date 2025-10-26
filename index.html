@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobo Htet | Digital Creator & Developer</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Enable dark mode based on 'dark' class on <html>
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#111827', // Dark background
+                        'secondary-dark': '#1F2937', // Dark card background
+                        'accent': '#3B82F6', // Blue accent
+                        'accent-hover': '#2563EB',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-primary-dark text-gray-800 dark:text-gray-200">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-secondary-dark shadow-md">
+        <div class="max-w-6xl mx-auto p-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-accent">Lobo Htet</h1>
+            <nav class="space-x-4 hidden sm:flex">
+                <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent transition duration-150">About</a>
+                <a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent transition duration-150">Projects</a>
+                <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent transition duration-150">Contact</a>
+            </nav>
+            <button id="themeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-150" aria-label="Toggle dark mode">
+                <!-- Moon Icon for Light Mode (Click to go Dark) -->
+                <svg id="moonIcon" class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                <!-- Sun Icon for Dark Mode (Click to go Light) -->
+                <svg id="sunIcon" class="w-6 h-6 text-gray-300 dark:text-yellow-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Hero Section -->
+        <section id="hero" class="py-16 sm:py-24 text-center">
+            <div class="w-32 h-32 mx-auto bg-accent flex items-center justify-center mb-6 shadow-xl">
+                <img src="https://files.catbox.moe/p99tz0.jpg"> 
+            </div>
+            <h2 class="text-4xl sm:text-6xl font-extrabold mb-4 dark:text-white">
+                Hello, I'm <span class="text-accent">Lobo Htet</span>
+            </h2>
+            <p class="text-xl sm:text-2xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+                Gamer, Digital Creator, Game and Web Developer.
+            </p>
+            <div class="mt-8 flex justify-center space-x-4">
+                <a href="#projects" class="bg-accent text-white py-3 px-6 rounded-lg font-semibold shadow-lg hover:bg-accent-hover transition duration-300 transform hover:scale-105">View Work</a>
+                <a href="#contact" class="bg-transparent border border-accent text-accent py-3 px-6 rounded-lg font-semibold hover:bg-accent/10 transition duration-300 transform hover:scale-105">Get in Touch</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="pt-12 pb-16 border-t border-gray-200 dark:border-gray-700">
+            <h3 class="text-3xl font-bold text-center mb-10 text-gray-900 dark:text-white">About Me</h3>
+            <div class="bg-white dark:bg-secondary-dark p-6 sm:p-8 rounded-xl shadow-2xl transition duration-300">
+                <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                    I am a versatile digital creator focused on bringing creative visions to life across multiple mediums. My skills span dynamic video content creation using tools like <span class="font-semibold text-accent">DaVinci Resolve Studio</span>, hands-on game development with <span class="font-semibold text-accent">Unity and Godot</span>, and practical web development using <span class="font-semibold text-accent">PHP</span>. I thrive at the intersection of creativity and code, always looking for the next challenging project.
+                </p>
+                <div class="mt-6 flex flex-wrap justify-center sm:justify-start gap-3">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-sm font-medium rounded-full">Video Editing (VFX)</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-sm font-medium rounded-full">Game Development</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 text-sm font-medium rounded-full">Web Development</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="pt-12 pb-16 border-t border-gray-200 dark:border-gray-700">
+            <h3 class="text-3xl font-bold text-center mb-10 text-gray-900 dark:text-white">Featured Projects</h3>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Project 1: Video/VFX -->
+                <div class="bg-white dark:bg-secondary-dark rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-accent mb-2">Template</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 text-sm">Ad Astra Abyssoque. Description can't be described.</p>
+                        <ul class="space-y-1 text-gray-500 dark:text-gray-400 text-sm">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-2"></span>Tool: Visual Studio </li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-2"></span>Focus: I shouldn't use Tailwind</li>
+                        </ul>
+                        <a href="#" class="mt-4 inline-block text-sm text-accent font-semibold hover:text-accent-hover">No Json →</a>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="pt-12 pb-16 border-t border-gray-200 dark:border-gray-700 text-center">
+            <h3 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Let's Connect</h3>
+            <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">I'm always open to new project ideas and collaborations. Reach out easily via Telegram!</p>
+
+            <div class="inline-block bg-white dark:bg-secondary-dark p-6 rounded-xl shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                <p class="text-xl font-semibold mb-3">Telegram Messenger</p>
+                <div class="flex items-center justify-center space-x-2">
+                    <!-- Telegram Icon (Simple SVG) -->
+                    <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.731 2.373a1.42 1.42 0 00-.913-.889 1.42 1.42 0 00-1.07.013l-18 6A1.5 1.5 0 001.373 9.77l4.318 3.518L18.1 6.897 8.04 15.696l2.35 1.956c.264.22.61.328.956.328a1.49 1.49 0 001.07-.44l8.814-7.51a1.5 1.5 0 00.32-1.956zM8 22c.313 0 .617-.123.848-.354l2.15-2.15-1.572-1.573L6.427 19.646c-.468.468-1.226.468-1.694 0-.468-.468-.468-1.226 0-1.694l1.573-1.572-2.15-2.15c-.468-.468-.468-1.226 0-1.694l.848-.848-4.318-3.518A1.5 1.5 0 000 9.77V1.5C0 .67.67 0 1.5 0h21C22.33 0 23 .67 23 1.5v19c0 .83-.67 1.5-1.5 1.5H8zm0 0"></path></svg>
+                    <a href="https://t.me/lobohtet" target="_blank" class="text-accent font-bold text-2xl hover:underline" id="telegramHandle">@lobohtet</a>
+                </div>
+                <button onclick="copyToClipboard('@lobohtet')" class="mt-4 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 py-2 px-4 rounded-full text-sm hover:bg-gray-200 dark:hover:bg-gray-600 transition">
+                    Click to Copy Handle
+                </button>
+                <p id="copyMessage" class="text-sm mt-2 text-green-500 opacity-0 transition-opacity duration-300">Copied!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-secondary-dark mt-12 border-t border-gray-200 dark:border-gray-700">
+        <div class="max-w-6xl mx-auto p-4 text-center text-sm text-gray-500 dark:text-gray-400">
+            &copy; 2025 Lobo Htet. All rights reserved. | Built with HTML & Tailwind CSS.
+        </div>
+    </footer>
+
+
+    <script>
+        // --- Dark Mode Toggle Logic ---
+        const themeToggle = document.getElementById('themeToggle');
+        const sunIcon = document.getElementById('sunIcon');
+        const moonIcon = document.getElementById('moonIcon');
+        const html = document.documentElement;
+        
+        // Initial setup based on OS preference or stored state
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            html.classList.add('dark');
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+        } else {
+            html.classList.remove('dark');
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            }
+        });
+
+        // --- Copy to Clipboard Function ---
+        function copyToClipboard(text) {
+            // Using document.execCommand('copy') as navigator.clipboard.writeText() is restricted in some environments (like iFrames)
+            const el = document.createElement('textarea');
+            el.value = text;
+            el.setAttribute('readonly', '');
+            el.style.position = 'absolute';
+            el.style.left = '-9999px';
+            document.body.appendChild(el);
+            el.select();
+            
+            let success = false;
+            try {
+                success = document.execCommand('copy');
+                if (success) {
+                    const msg = document.getElementById('copyMessage');
+                    msg.classList.remove('opacity-0');
+                    setTimeout(() => {
+                        msg.classList.add('opacity-0');
+                    }, 2000);
+                }
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+            }
+            
+            document.body.removeChild(el);
+        }
+        
+        // Expose the function globally so it can be called from the inline onclick
+        window.copyToClipboard = copyToClipboard;
+
+    </script>
+</body>
+</html>
+
